@@ -18,8 +18,8 @@ Designed specifically for modern AI assistants, this skill strictly enforces pro
 - ✍️ **Accessible & Professional Language:** Strict rules enforce the use of plain, simple English to ensure maximum readability for all audiences.
 - 📏 **Strict Formatting Constraints:**
   - Hard-wrapped text for perfect plain-text viewing in any editor.
-  - Bolded headers with clear, clean spacing.
-  - Ultra-concise descriptions (Maximum 6 lines).
+  - Clean, unbolded headers with clear spacing.
+  - Strict severity-based length constraints for descriptions and business impact.
   - Clean paragraphs (URLs are stripped from descriptions and reproduction steps).
 
 ## 🚀 How to Install

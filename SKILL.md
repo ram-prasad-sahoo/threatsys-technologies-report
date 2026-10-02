@@ -109,35 +109,35 @@ When such a library is present:
 
 ### Report structure (exact order, no extra sections)
 ```
-**Vulnerability:** <Name>
+Vulnerability: <Name>
 
-**Risk Level:** <Critical / High / Medium / Low>
+Risk Level: <Critical / High / Medium / Low>
 
-**Impact:** <Critical / High / Medium / Low>
+Impact: <Critical / High / Medium / Low>
 
-**Likelihood:** <High / Medium / Low>
+Likelihood: <High / Medium / Low>
 
-**Business Impact**
-
-<paragraph>
-
-**Description**
+Business Impact
 
 <paragraph>
 
-**Steps to Reproduce**
+Description
+
+<paragraph>
+
+Steps to Reproduce
 
 1. ...
 
-**Vulnerable URL**   (relabeled per domain reference — see references/*.md)
+Vulnerable URL   (relabeled per domain reference — see references/*.md)
 
 <value>
 
-**CWE/CVE/OWASP**   (extended per domain reference where applicable, e.g. + MASVS, + CIS)
+CWE/CVE/OWASP   (extended per domain reference where applicable, e.g. + MASVS, + CIS)
 
 <classification>
 
-**Recommendation**
+Recommendation
 
 1. ...
 ```
@@ -155,39 +155,24 @@ When such a library is present:
 - Hard-wrap all text at approximately 80 characters per line so paragraphs do not appear as one long line in plain text editors.
 
 ### Business Impact
-Prose paragraph, no bullets. Cover only: (1) what an attacker could actually do, (2) what data /
-users / accounts / functionality are affected, (3) the realistic organizational consequence.
-Exclude endpoints, parameters, payloads, HTTP methods, framework/tool names, and technical testing
-detail.
+Do not add bug description, add the bug impact. Prose paragraph only, never bullets. Describe only the business consequence of the specific vulnerability in the specific application. First determine: (1) what an attacker could actually do; (2) what data, users, accounts, or functionality could be affected; (3) the realistic organizational consequence.
+Exclude: endpoints, parameters, payloads, HTTP methods, framework/tool names, technical testing details, generic definitions, industry statistics, unsupported consequences.
 
 Length & opening by severity:
-- **Critical** (3–5 sentences): attack + affected data/functionality + business/legal/regulatory
-  consequence where supported. Open: "This vulnerability leads to..." / "An attacker can fully..."
-- **High** (2–3 sentences): primary business impact + realistic escalation risk. Open: "This
-  vulnerability poses a significant threat..." / "The presence of [vulnerability] can allow
-  attackers to..."
-- **Medium** (2–3 sentences): one realistic attack scenario + one specific business consequence.
-  Open: "This vulnerability allows an attacker to..."
-- **Low** (2–3 sentences): acknowledge limited direct impact, explain the relevant indirect
-  consequence. Open: "This vulnerability exposes..." / "Although this does not directly
-  compromise..."
+- **Critical** (3–5 sentences): attack, affected data/functionality, business/legal/regulatory consequences where supported. Preferred opening: "This vulnerability leads to..." / "An attacker can fully..."
+- **High** (2–3 sentences): primary business impact, realistic escalation risk. Preferred opening: "This vulnerability poses a significant threat..." / "The presence of [vulnerability] can allow attackers to..."
+- **Medium** (2–3 sentences): one realistic attack scenario, one specific business consequence. Preferred opening: "This vulnerability allows an attacker to..."
+- **Low** (2–3 sentences): acknowledge limited direct impact, explain relevant indirect business/security consequence. Preferred opening: "This vulnerability exposes..." / "Although this does not directly compromise..."
 
-End with a realistic consequence where appropriate: unauthorized disclosure, user trust, business
-trust, reputational damage, regulatory non-compliance, reduced overall security posture.
+End with a realistic consequence when appropriate: unauthorized disclosure, user trust, business trust, reputational damage, regulatory non-compliance, reduced overall security posture.
 
 ### Description
-Open with exactly one of: "It was observed that...", "An issue was identified where...",
-"The assessment revealed that...". (Do NOT use "During testing" or words like "we"/"our").
-
-Then, in past tense, in this order: (1) what was observed, (2) the exact affected
-functionality/component (use the domain-specific identifier style from the loaded reference file,
-e.g. `selected_depot` param, `id=6`, "Manage Banner functionality", a file+line, an IAM policy ARN,
-a ViewController name — whichever applies), (3) the action performed, (4) what the
-application returned/displayed/did, (5) what the behavior technically confirmed. End with a clear
-technical root-cause/conclusion statement. No remediation, no generic definitions, no repeating
-Business Impact, no speculation, no classification names. Write only the on-point detail, keep it highly accurate, and NEVER mention URLs in the Description.
-
-Length: Maximum 6 lines for the entire description paragraph, regardless of severity.
+Begin with exactly one of: "It was observed by our team that..." / "Our team observed that..." / "During the security assessment, our team identified..." / "During testing, our team observed that..."
+Describe only what was technically observed, in past tense, in this order: (1) what was observed; (2) exact affected functionality/component; (3) action performed; (4) what the application returned/displayed/did; (5) what the behavior technically confirmed.
+Identify exact components when supported (e.g., `selected_depot` not "a parameter"; `id=6` not "an ID"; "Manage Banner functionality" not "a feature"; `/rcs/download-file/` not "an endpoint"), but avoid long endpoint names if the functionality name suffices.
+Include confirmation evidence where available and end with a clear technical root-cause/conclusion statement. Stay focused on the vulnerability.
+Do NOT: give remediation, generic definitions, repeat Business Impact, speculate, mention unsupported consequences, or mention CWE/CVE/OWASP.
+Length: Critical 5–8 sentences; High 3–5; Medium 3–4; Low 2–3.
 
 ### Steps to Reproduce
 Numbered list, generate the number of steps the uploaded evidence actually supports (default to
