@@ -1,21 +1,52 @@
-# Threatsys Technologies Report Skill
+<div align="center">
+  <h1>🛡️ Threatsys Technologies Report Skill 🛡️</h1>
+  <p><strong>A specialized AI Skill to instantly generate professional, evidence-based penetration testing reports.</strong></p>
+</div>
 
-This repository contains a specialized AI skill to generate professional, evidence-based penetration testing vulnerability reports in the **Threatsys Technologies** format. 
+---
 
-By adding this skill to your AI assistant, you can simply paste a bug description or raw proof-of-concept (PoC) data into the chat, and the AI will automatically generate a polished, structured `.txt` report across multiple application domains (Web, Mobile, API, Cloud, Source Code, Desktop).
+## 📖 Overview
 
-## How to use this skill
+The **Threatsys Technologies Report Skill** transforms raw, unstructured proof-of-concept (PoC) data and bug descriptions into highly polished, structured `.txt` vulnerability reports. 
 
-### If you are using an AI assistant that supports custom skills (like Antigravity):
-1. **Copy the GitHub URL** of this repository.
-2. Paste the URL into your AI assistant and ask it to "add this skill from the URL".
-3. Once the skill is added, simply type something like:
-   > `/threatsys-technologies-report Create a report for this finding: [Paste your bug description and PoC here]`
+Designed specifically for modern AI assistants, this skill strictly enforces professional reporting standards, ensuring that outputs are concise, accessible, and strictly evidence-based.
 
-The AI will parse your evidence and output a clean, formatted vulnerability report without any extra hassle.
+## ✨ Key Features
 
-### Features
-* **Zero Boilerplate:** No need to fill out forms; just dump raw request/response data and observations.
-* **Smart Domain Detection:** Automatically detects whether the vulnerability belongs to Web, Mobile, API, Cloud, etc.
-* **Strict Formatting:** Adheres to a strict professional format, utilizing simple English, active voice, and precise technical descriptions.
-* **Evidence-Based:** Never fabricates details—it only reports what your provided evidence supports.
+- 🎯 **Zero Boilerplate:** No need to fill out complex forms. Upload your PoC and information about the bug directly into the chat.
+- 🧠 **Smart Domain Detection:** Automatically detects the context of the vulnerability—whether it's Web, Mobile (iOS/Android), API, Cloud, Desktop, or Source Code.
+- ✍️ **Accessible & Professional Language:** Strict rules enforce the use of plain, simple English to ensure maximum readability for all audiences.
+- 📏 **Strict Formatting Constraints:**
+  - Hard-wrapped text for perfect plain-text viewing in any editor.
+  - Bolded headers with clear, clean spacing.
+  - Ultra-concise descriptions (Maximum 6 lines).
+  - Clean paragraphs (URLs are stripped from descriptions and reproduction steps).
+
+## 🚀 How to Install
+
+If you are using an AI assistant that supports custom skills from Git repositories (like Antigravity):
+
+1. Copy the URL of this repository:
+   ```text
+   https://github.com/ram-prasad-sahoo/threatsys-technologies-report.git
+   ```
+2. Paste the URL into your AI assistant and instruct it:
+   > *"Add this skill from the URL."*
+
+## 💡 Usage
+
+Once the skill is active in your environment, simply type the command `/threatsys-technologies-report` followed by your findings.
+
+### Example Prompt
+```text
+/threatsys-technologies-report 
+[Paste your bug description and PoC here]
+```
+
+### What You Get
+The AI will process the raw input and generate a perfectly formatted `<Bug Name>.txt` file containing Risk Levels, Business Impact, CWE/OWASP mappings, and specific Recommendations—all adhering to the Threatsys Technologies standard.
+
+---
+<div align="center">
+  <i>Built for efficient, high-quality vulnerability reporting.</i>
+</div>
