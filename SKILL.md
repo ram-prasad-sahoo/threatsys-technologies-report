@@ -157,6 +157,7 @@ Recommendation
 ### Business Impact
 Do not add bug description, add the bug impact. Prose paragraph only, never bullets. Describe only the business consequence of the specific vulnerability in the specific application. First determine: (1) what an attacker could actually do; (2) what data, users, accounts, or functionality could be affected; (3) the realistic organizational consequence.
 Exclude: endpoints, parameters, payloads, HTTP methods, framework/tool names, technical testing details, generic definitions, industry statistics, unsupported consequences.
+Write in a natural, cohesive, and easy-to-read paragraph. Do NOT write disconnected sentences that read like log lines.
 
 Length & opening by severity:
 - **Critical** (3–5 sentences): attack, affected data/functionality, business/legal/regulatory consequences where supported. Preferred opening: "This vulnerability leads to..." / "An attacker can fully..."
@@ -171,6 +172,7 @@ Begin with exactly one of: "It was observed by our team that..." / "Our team obs
 Describe only what was technically observed, in past tense, in this order: (1) what was observed; (2) exact affected functionality/component; (3) action performed; (4) what the application returned/displayed/did; (5) what the behavior technically confirmed.
 Identify exact components when supported (e.g., `selected_depot` not "a parameter"; `id=6` not "an ID"; "Manage Banner functionality" not "a feature"; `/rcs/download-file/` not "an endpoint"), but avoid long endpoint names if the functionality name suffices.
 Include confirmation evidence where available and end with a clear technical root-cause/conclusion statement. Stay focused on the vulnerability.
+Write in a natural, cohesive, and easy-to-read paragraph. Do NOT write disconnected, mechanical sentences that read like log lines.
 Do NOT: give remediation, generic definitions, repeat Business Impact, speculate, mention unsupported consequences, or mention CWE/CVE/OWASP.
 Length: Critical 5–8 sentences; High 3–5; Medium 3–4; Low 2–3.
 
